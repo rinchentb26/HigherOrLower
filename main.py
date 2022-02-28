@@ -1,6 +1,7 @@
 from art import logo
 from art import vs
 from game_data import data
+from replit import clear
 import random
 
 
@@ -42,6 +43,8 @@ def game():
         print(f"Against B: {format_data(second_acc)}")
         choice = input("Who has more followers? Type 'A' or 'B' : ").lower()
         is_correct = compare(first_acc, second_acc,choice)
+        clear()
+        print(logo)
         if is_correct:
             score += 1
             print(f"You got it right. Your score is {score}.")
